@@ -11,11 +11,22 @@ Este projeto é um gerenciador de voos desenvolvido em Django com banco de dados
 - Django
 - Sqlite3
 
+## Configuração do Ambiente
+Antes de executar o projeto, você precisa configurar o ambiente em sua máquina. Você precisa ter o Python 3.x e SQLite3 instalados em sua máquina.
+
+Python 3.x: https://www.python.org/downloads/
+SQLite3: https://www.sqlite.org/download.html
+
+## Instalação e Execução
+Clone o repositório utilizando o comando `git clone https://github.com/caiohlucena/EDX-Python-and-JS.git.`
+
+No terminal, acessado no diretorio "EDX-Python-and-JS, execute o comando `pip install -r requirements.txt` para instalar as dependências necessárias.
+
 ## Utilização
 
 Na pasta Airline, enviar o comando `python manage.py runserver`
 
-Para utilizar o gerenciador de voos, basta acessar a página inicial do projeto em seu navegador.
+Para utilizar o gerenciador de voos, basta acessar a página inicial do projeto `http://127.0.0.1:8000/flights` em seu navegador.
 
 Na página inicial, é possível ver a lista de voos cadastrados. Ao clicar em um voo, é possível cadastrar passageiros no voo e ver quais passageiros já estão cadastrados.
 

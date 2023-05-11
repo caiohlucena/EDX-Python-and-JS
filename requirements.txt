@@ -1,0 +1,11 @@
+antiorm==1.2.1
+asgiref==3.6.0
+db==0.1.1
+distlib==0.3.6
+Django==4.1.7
+filelock==3.10.7
+platformdirs==3.2.0
+sqlparse==0.4.3
+tzdata==2023.3
+virtualenv==20.21.0
+virtualenvwrapper-win==1.2.7
