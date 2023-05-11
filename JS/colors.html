@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hello</title>
+    <script>
+        
+        // Alterar a cor por botões
+        //document.addEventListener("DOMContentLoaded", () =>{ // Quando toda a pagina estiver carregada ...
+            //Quando estiver tudo carregado, selecione todos os (botoes)
+            // Para cada botão quero que faça uma função, todas iguais porem para cada botão 
+            //document.querySelectorAll('button').forEach(button =>{
+                //Depois de criar a função para cada um, quero que crieu outra função para quando clicar no botão
+                //button.onclick = function(){
+                    //Quando clicar no botão quero que pegue os dados de cor que foi definido e aplique no determinado id 'hello'
+                    //document.querySelector('#hello').style.color = button.dataset.color
+                //}
+            //});
+        //});
+        document.addEventListener("DOMContentLoaded", () =>{
+            document.querySelector('select').onchange = function(){
+                document.querySelector('#hello').style.color = this.value;
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1 id="hello">Hello</h1>
+    <!-- <button data-color="red">Red</button>
+    <button data-color="blue">Blue</button>
+    <button data-color="green">Green</button> -->
+
+    <select>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+
+</body>
+</html>
