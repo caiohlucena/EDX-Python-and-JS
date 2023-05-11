@@ -12,10 +12,12 @@ Este projeto é um gerenciador de voos desenvolvido em Django com banco de dados
 - Sqlite3
 
 ## Configuração do Ambiente
-Antes de executar o projeto, você precisa configurar o ambiente em sua máquina. Você precisa ter o Python 3.x e SQLite3 instalados em sua máquina.
+Antes de executar o projeto, você precisa configurar o ambiente em sua máquina. Você precisa ter o Python 3.x, SQLite3 e Pip instalados em sua máquina.
 
 Python 3.x: https://www.python.org/downloads/
 SQLite3: https://www.sqlite.org/download.html
+
+Após realizar a intalação do python, no terminal excute o comando `pip install pip`
 
 ## Instalação e Execução
 Clone o repositório utilizando o comando `git clone https://github.com/caiohlucena/EDX-Python-and-JS.git.`

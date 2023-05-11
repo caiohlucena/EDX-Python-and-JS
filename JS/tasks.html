@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("form").onsubmit=() =>{
+                const task = document.querySelector("#task").value;
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Tasks</h1>
+    <ul class="tasks">
+    </ul>
+    <form>
+        <input type="text" id="task" placeholder="New Task">
+        <input type="submit">
+    </form>
+</body>
+</html>
