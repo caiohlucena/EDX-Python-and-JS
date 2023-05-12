@@ -32,6 +32,14 @@ Para utilizar o gerenciador de voos, basta acessar a página inicial do projeto 
 
 Na página inicial, é possível ver a lista de voos cadastrados. Ao clicar em um voo, é possível cadastrar passageiros no voo e ver quais passageiros já estão cadastrados.
 
+## Imagens
+![Tela Inicial](/Initial.png)
+
+![Tela de Voos](/Flights.png)
+
+![Descrição de Voos](/FlightInfo.png)
+
+
 ## Contribuição
 
 Contribuições são sempre bem-vindas! Para contribuir com este projeto, siga os seguintes passos:

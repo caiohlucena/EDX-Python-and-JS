@@ -4,19 +4,43 @@
     <title>Task</title>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+
+            document.querySelector('#submit').disabled = true;
+
+            document.querySelector('#task').onkeyup = () => {
+                if (document.querySelector('task').value.lenght > 0) {
+                document.querySelector('#submit').disabled = false;
+                } else {
+                    document.querySelector('#submit').disabled = true;
+            }
+
             document.querySelector("form").onsubmit=() =>{
                 const task = document.querySelector("#task").value;
+                console.log(task);
+                
+                //criar  const para armanezar oq foi enviado pelo task
+                const li = document.createElement('li');
+                //Amarzaner isso  em cada uma que for criada
+                li.innerHTML = task;
+                //Organiza e cria novos li
+                document.querySelector('#tasks').appendChild(li);
+
+                document.querySelector('#tasks').value = '';
+                document.querySelector('#submit').disabled = true;
+
+                //stop from submiting
+                return false;
             }
         });
     </script>
 </head>
 <body>
     <h1>Tasks</h1>
-    <ul class="tasks">
+    <ul id="tasks">
     </ul>
     <form>
         <input type="text" id="task" placeholder="New Task">
-        <input type="submit">
+        <input id="submit" type="submit">
     </form>
 </body>
 </html>
