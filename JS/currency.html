@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Currency Exchange</title>
+    <style>
+        body {
+            
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #00bcd4, #006064);
+            background-size: cover;
+            background-attachment: fixed;
+            animation: shadow 20s linear infinite;
+            background-attachment: fixed;
+          }          
+          
+          form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          
+          input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px #00bcd4;
+          }
+          
+          input[type="submit"] {
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00bcd4;
+            color: #fff;
+            cursor: pointer;
+          }
+          
+          @keyframes shadow {
+            0% {
+              box-shadow: 0 0 20px #00bcd4;
+            }
+            50% {
+              box-shadow: 0 0 50px #00bcd4;
+            }
+            100% {
+              box-shadow: 0 0 20px #00bcd4;
+            }
+          }
+          
+    </style>
+    <script>
+        //autenticação
+        var myHeaders = new Headers();
+        myHeaders.append("apikey", "ZoEEfQQjJPNgAWNYON3FecfwhNMNGFDa");
+
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow',
+            headers: myHeaders
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelector('form').onsubmit = function (){
+                //capturar dados a partir deste url
+                fetch("https://api.apilayer.com/exchangerates_data/latest?&base=USD", requestOptions)
+                //Converter para json
+                .then(response => response.json())
+                //mostrar o Json no console
+                .then(result => {
+                    const currency = document.querySelector('#currency').value.toUpperCase();
+                    const rate = result.rates[currency];
+                    if (rate !== undefined) {
+                        document.querySelector('body').innerHTML = `1 USD is equal to ${rate.toFixed(3)} ${currency}.`;
+
+                    } else {
+                        document.querySelector('body').innerHTML = "Ivalid Currency";
+                    }
+                })
+                .catch(error =>{
+                    console.log('Error:', error);
+                });
+                return false;
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="currency" placeholder="Currency" />
+        <input type="submit" value="Convert" />
+        <div id="result">
+
+        </div>
+    </form>
+</body>
+
+</html>

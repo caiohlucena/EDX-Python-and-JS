@@ -3,12 +3,20 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [
+    "json.schemas": [
         {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Open counter.html",
-            "file": "c:\\Users\\CaioH\\OneDrive\\Área de Trabalho\\EDX\\EDX-Python-and-JS\\JS\\counter.html"
+            "fileMatch": [
+                "/.html"
+            ],
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "name" : {
+                        "type": "string",
+                        "description": "The name of the entry"
+                    }
+                }
+            }
         }
     ]
 }
